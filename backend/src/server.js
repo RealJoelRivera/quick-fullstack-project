@@ -30,11 +30,7 @@ app.get('/realtors', (req, res) => {
   // get req. to see all realtors
   REALTOR.findAll().then(data => {
     res.status(200)
-      .send(data.map(realtor => {
-        const { name, email, phone } = realtor;
-        return `${name}, ${email}, ${phone}`;
-      })
-      )
+      .send(data)
   })
     .catch(err => console.error(err));
   // res.end();

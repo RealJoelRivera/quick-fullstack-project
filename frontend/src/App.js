@@ -15,9 +15,13 @@ class App extends React.Component {
       .then(realtors => this.setState({ realtors }))
   }
 
-  deleteRealtor(e) {
-    console.log(e)
-    console.log(e.target)
+  deleteRealtor(realtorInfo) {
+    const name = realtorInfo.name;
+    fetch(`http://localhost:3000/realtors/${name}`, {
+      method: 'DELETE'
+    })
+      .then(r => r.json)
+    // .then(this.setState({ realtors: [...realtors] }))
   }
 
   render() {

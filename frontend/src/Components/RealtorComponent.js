@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 class RealtorComponent extends Component {
   render() {
-    // console.log(this.props.realtor)
     return (
       <div>
         <div>
-          {this.props.realtor}<button onClick={(e) => this.props.handleDelete(e)}>Delete Realtor</button>
+          <h2>{this.props.name}</h2><h4>{this.props.email}</h4><h4>{this.props.phone}</h4><button onClick={() => this.props.handleDelete(this.props.realtor)}>Delete Realtor</button>
         </div>
-      </div>
+      </div >
     )
   }
 }
