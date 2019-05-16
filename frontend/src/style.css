@@ -1,0 +1,10 @@
+* {
+  background-color: dodgerblue;
+  color: rgb(235, 224, 220);
+  margin: 10px;
+}
+
+button {
+  background-color: white;
+  color: dodgerblue;
+}

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParder = require('body-parser');
 const database = require('./database.js');
@@ -12,7 +13,7 @@ const { LISTING } = database;
 
 const PORT = 3000;
 app.use(bodyParder.json());
-
+app.use(cors());
 
 // harcoded Luis in to see if the DB works and it does!
 
